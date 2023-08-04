@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="AutoFiller_APP_DBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="AutoFiller_APP_DBModelStoreContainer">
+    <EntitySet Name="CivilSurgeons" EntityType="AutoFiller_APP_DBModel.Store.CivilSurgeons" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Preparers" EntityType="AutoFiller_APP_DBModel.Store.Preparers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Patients" EntityType="AutoFiller_APP_DBModel.Store.Patients" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="CivilSurgeons">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FormId" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="FormData" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="true" />
+    <Property Name="LastUpdated" Type="datetime" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Preparers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FormId" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="FormData" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="true" />
+    <Property Name="LastUpdated" Type="datetime" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Patients">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UniqueId" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="I693Data" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="true" />
+  </EntityType>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AutoFiller_APP_DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="AutoDBContext" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CivilSurgeons" EntityType="AutoFiller_APP_DBModel.CivilSurgeon" />
+          <EntitySet Name="Preparers" EntityType="AutoFiller_APP_DBModel.Preparer" />
+          <EntitySet Name="Patients" EntityType="AutoFiller_APP_DBModel.Patient" />
+        </EntityContainer>
+        <EntityType Name="CivilSurgeon">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FormId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FormData" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="LastUpdated" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Preparer">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FormId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FormData" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="LastUpdated" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Patient">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UniqueId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="I693Data" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AutoFiller_APP_DBModelStoreContainer" CdmEntityContainer="AutoDBContext">
+    <EntitySetMapping Name="CivilSurgeons">
+      <EntityTypeMapping TypeName="IsTypeOf(AutoFiller_APP_DBModel.CivilSurgeon)">
+        <MappingFragment StoreEntitySet="CivilSurgeons">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FormId" ColumnName="FormId" />
+          <ScalarProperty Name="FormData" ColumnName="FormData" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Preparers">
+      <EntityTypeMapping TypeName="IsTypeOf(AutoFiller_APP_DBModel.Preparer)">
+        <MappingFragment StoreEntitySet="Preparers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FormId" ColumnName="FormId" />
+          <ScalarProperty Name="FormData" ColumnName="FormData" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Patients">
+      <EntityTypeMapping TypeName="IsTypeOf(AutoFiller_APP_DBModel.Patient)">
+        <MappingFragment StoreEntitySet="Patients">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UniqueId" ColumnName="UniqueId" />
+          <ScalarProperty Name="I693Data" ColumnName="I693Data" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

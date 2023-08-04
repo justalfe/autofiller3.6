@@ -1,0 +1,10 @@
+{
+  "sql_server_name": "DESKTOP-GGUCT1A\\SQLEXPRESS",
+  "database_name": "AutoFiller_APP_DB",
+  "sql_user_id": "sa",
+  "sql_password": "SoftwareGoat2023",
+  "web_server_url": "http://localhost:57112/",
+  "jotform_url": "https://hipaa-api.jotform.com/",
+  "jotform_api_key": "498ca5f5b4d164e808595f856799bdbc",
+  "jotform_id": 232005335483045
+}

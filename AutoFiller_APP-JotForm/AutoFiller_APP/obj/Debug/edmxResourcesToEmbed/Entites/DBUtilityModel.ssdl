@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AutoFiller_APP_DBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="AutoFiller_APP_DBModelStoreContainer">
+    <EntitySet Name="CivilSurgeons" EntityType="AutoFiller_APP_DBModel.Store.CivilSurgeons" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Preparers" EntityType="AutoFiller_APP_DBModel.Store.Preparers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Patients" EntityType="AutoFiller_APP_DBModel.Store.Patients" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="CivilSurgeons">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FormId" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="FormData" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="true" />
+    <Property Name="LastUpdated" Type="datetime" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Preparers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FormId" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="FormData" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="true" />
+    <Property Name="LastUpdated" Type="datetime" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Patients">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UniqueId" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="I693Data" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="true" />
+  </EntityType>
+</Schema>
