@@ -23,12 +23,14 @@ namespace AutoFiller_APP.Model
         public string source { get; set; }
         public bool completed { get; set; }
         public string form_data { get; set; }
+        public SubmitFormModel submit_form_model { get; set; }
 
         public SubmitFormModel Convert2SubmitFormModel()
         {
             var form = new SubmitFormModel();
             JavaScriptSerializer jss = new JavaScriptSerializer();
             var d = jss.Deserialize<dynamic>(form_data);
+            
             var data = d["_form"];
 
             // InformationAboutYou data part

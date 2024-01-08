@@ -30,37 +30,7 @@ namespace AutoFiller_APP
             _sex.Items.Add("Male");
             _sex.Items.Add("Female");
 
-            var answer = "Google";
-            switch (form.answer)
-            {
-                case 0:
-                    answer = "Google";
-                    break;
-                case 1:
-                    answer = "Facebook";
-                    break;
-                case 2:
-                    answer = "Yelp";
-                    break;
-                case 3:
-                    answer = "Lawyer: " + form.extraData;
-                    break;
-                case 4:
-                    answer = "TV";
-                    break;
-                case 5:
-                    answer = "Newspaper";
-                    break;
-                case 6:
-                    answer = "Radio";
-                    break;
-                case 7:
-                    answer = "Bing";
-                    break;
-                case 8:
-                    answer = "Other";
-                    break;
-            }
+            var answer = APIManager.GetReferredBy(form.answer, form.extraData);
             lblRefere.Text = answer;
 
             _lastname.Text = _sourceForm.InformationAboutYou._lastname;

@@ -36,6 +36,12 @@ namespace AutoFiller_APP.Model
             }
         }
 
+        public static List<PatientExportModel> Patients(this IEnumerable<PatientExportModel> request)
+        {
+            var result = request.ToList();
+            return result;
+        }
+
     }
 
     public class ItemGender

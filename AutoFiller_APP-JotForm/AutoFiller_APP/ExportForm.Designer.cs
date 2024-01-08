@@ -28,47 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ExportSCExcel = new System.Windows.Forms.Button();
-            this.ExportPrpExcel = new System.Windows.Forms.Button();
             this.ExportPatientData = new System.Windows.Forms.Button();
             this.startDateBox = new System.Windows.Forms.DateTimePicker();
             this.endDateBox = new System.Windows.Forms.DateTimePicker();
-            this.AllCheckBox = new System.Windows.Forms.CheckBox();
-            this.cmbGender = new System.Windows.Forms.ComboBox();
-            this.txtAddress = new System.Windows.Forms.TextBox();
-            this.txtPhone = new System.Windows.Forms.TextBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblFromDate = new System.Windows.Forms.Label();
             this.lblToDate = new System.Windows.Forms.Label();
-            this.lblGender = new System.Windows.Forms.Label();
-            this.lblAddress = new System.Windows.Forms.Label();
-            this.lblPhone = new System.Windows.Forms.Label();
-            this.lblEmail = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.chkCity = new System.Windows.Forms.CheckBox();
+            this.chkState = new System.Windows.Forms.CheckBox();
+            this.chkPhone = new System.Windows.Forms.CheckBox();
+            this.chkEmail = new System.Windows.Forms.CheckBox();
+            this.chkReferred = new System.Windows.Forms.CheckBox();
+            this.chkCountryOfBirth = new System.Windows.Forms.CheckBox();
+            this.chkDob = new System.Windows.Forms.CheckBox();
+            this.chkName = new System.Windows.Forms.CheckBox();
+            this.chkAll = new System.Windows.Forms.CheckBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // ExportSCExcel
-            // 
-            this.ExportSCExcel.Location = new System.Drawing.Point(226, 253);
-            this.ExportSCExcel.Name = "ExportSCExcel";
-            this.ExportSCExcel.Size = new System.Drawing.Size(166, 23);
-            this.ExportSCExcel.TabIndex = 0;
-            this.ExportSCExcel.Text = "Export Civil Sergeons to Excel";
-            this.ExportSCExcel.UseVisualStyleBackColor = true;
-            this.ExportSCExcel.Click += new System.EventHandler(this.ExportSCExcel_Click);
-            // 
-            // ExportPrpExcel
-            // 
-            this.ExportPrpExcel.Location = new System.Drawing.Point(402, 253);
-            this.ExportPrpExcel.Name = "ExportPrpExcel";
-            this.ExportPrpExcel.Size = new System.Drawing.Size(151, 23);
-            this.ExportPrpExcel.TabIndex = 1;
-            this.ExportPrpExcel.Text = "Export Preparers to Excel";
-            this.ExportPrpExcel.UseVisualStyleBackColor = true;
-            this.ExportPrpExcel.Click += new System.EventHandler(this.ExportPrpExcel_Click);
             // 
             // ExportPatientData
             // 
-            this.ExportPatientData.Location = new System.Drawing.Point(67, 253);
+            this.ExportPatientData.Location = new System.Drawing.Point(233, 179);
             this.ExportPatientData.Name = "ExportPatientData";
             this.ExportPatientData.Size = new System.Drawing.Size(149, 23);
             this.ExportPatientData.TabIndex = 2;
@@ -78,63 +60,22 @@
             // 
             // startDateBox
             // 
-            this.startDateBox.Location = new System.Drawing.Point(69, 41);
+            this.startDateBox.Location = new System.Drawing.Point(74, 25);
             this.startDateBox.Name = "startDateBox";
             this.startDateBox.Size = new System.Drawing.Size(200, 20);
             this.startDateBox.TabIndex = 3;
             // 
             // endDateBox
             // 
-            this.endDateBox.Location = new System.Drawing.Point(353, 41);
+            this.endDateBox.Location = new System.Drawing.Point(358, 25);
             this.endDateBox.Name = "endDateBox";
             this.endDateBox.Size = new System.Drawing.Size(200, 20);
             this.endDateBox.TabIndex = 4;
             // 
-            // AllCheckBox
-            // 
-            this.AllCheckBox.AutoSize = true;
-            this.AllCheckBox.Location = new System.Drawing.Point(69, 195);
-            this.AllCheckBox.Name = "AllCheckBox";
-            this.AllCheckBox.Size = new System.Drawing.Size(37, 17);
-            this.AllCheckBox.TabIndex = 5;
-            this.AllCheckBox.Text = "All";
-            this.AllCheckBox.UseVisualStyleBackColor = true;
-            this.AllCheckBox.CheckedChanged += new System.EventHandler(this.AllCheckBox_CheckedChanged);
-            // 
-            // cmbGender
-            // 
-            this.cmbGender.FormattingEnabled = true;
-            this.cmbGender.Location = new System.Drawing.Point(67, 90);
-            this.cmbGender.Name = "cmbGender";
-            this.cmbGender.Size = new System.Drawing.Size(200, 21);
-            this.cmbGender.TabIndex = 6;
-            // 
-            // txtAddress
-            // 
-            this.txtAddress.Location = new System.Drawing.Point(353, 90);
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(200, 20);
-            this.txtAddress.TabIndex = 7;
-            // 
-            // txtPhone
-            // 
-            this.txtPhone.Location = new System.Drawing.Point(67, 132);
-            this.txtPhone.MaxLength = 10;
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(200, 20);
-            this.txtPhone.TabIndex = 8;
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(353, 132);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(200, 20);
-            this.txtEmail.TabIndex = 9;
-            // 
             // lblFromDate
             // 
             this.lblFromDate.AutoSize = true;
-            this.lblFromDate.Location = new System.Drawing.Point(9, 47);
+            this.lblFromDate.Location = new System.Drawing.Point(14, 32);
             this.lblFromDate.Name = "lblFromDate";
             this.lblFromDate.Size = new System.Drawing.Size(56, 13);
             this.lblFromDate.TabIndex = 10;
@@ -143,90 +84,183 @@
             // lblToDate
             // 
             this.lblToDate.AutoSize = true;
-            this.lblToDate.Location = new System.Drawing.Point(301, 46);
+            this.lblToDate.Location = new System.Drawing.Point(306, 32);
             this.lblToDate.Name = "lblToDate";
             this.lblToDate.Size = new System.Drawing.Size(46, 13);
             this.lblToDate.TabIndex = 11;
             this.lblToDate.Text = "To Date";
             // 
-            // lblGender
+            // groupBox1
             // 
-            this.lblGender.AutoSize = true;
-            this.lblGender.Location = new System.Drawing.Point(9, 90);
-            this.lblGender.Name = "lblGender";
-            this.lblGender.Size = new System.Drawing.Size(42, 13);
-            this.lblGender.TabIndex = 12;
-            this.lblGender.Text = "Gender";
+            this.groupBox1.Controls.Add(this.chkCity);
+            this.groupBox1.Controls.Add(this.chkState);
+            this.groupBox1.Controls.Add(this.chkPhone);
+            this.groupBox1.Controls.Add(this.chkEmail);
+            this.groupBox1.Controls.Add(this.chkReferred);
+            this.groupBox1.Controls.Add(this.chkAll);
+            this.groupBox1.Controls.Add(this.chkCountryOfBirth);
+            this.groupBox1.Controls.Add(this.chkDob);
+            this.groupBox1.Controls.Add(this.chkName);
+            this.groupBox1.Location = new System.Drawing.Point(12, 80);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(583, 82);
+            this.groupBox1.TabIndex = 24;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Export Colums";
             // 
-            // lblAddress
+            // chkCity
             // 
-            this.lblAddress.AutoSize = true;
-            this.lblAddress.Location = new System.Drawing.Point(301, 93);
-            this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(45, 13);
-            this.lblAddress.TabIndex = 13;
-            this.lblAddress.Text = "Address";
+            this.chkCity.AutoSize = true;
+            this.chkCity.Checked = true;
+            this.chkCity.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkCity.Location = new System.Drawing.Point(221, 54);
+            this.chkCity.Name = "chkCity";
+            this.chkCity.Size = new System.Drawing.Size(50, 17);
+            this.chkCity.TabIndex = 32;
+            this.chkCity.Text = "CITY";
+            this.chkCity.UseVisualStyleBackColor = true;
             // 
-            // lblPhone
+            // chkState
             // 
-            this.lblPhone.AutoSize = true;
-            this.lblPhone.Location = new System.Drawing.Point(9, 135);
-            this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(38, 13);
-            this.lblPhone.TabIndex = 14;
-            this.lblPhone.Text = "Phone";
+            this.chkState.AutoSize = true;
+            this.chkState.Checked = true;
+            this.chkState.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkState.Location = new System.Drawing.Point(277, 54);
+            this.chkState.Name = "chkState";
+            this.chkState.Size = new System.Drawing.Size(61, 17);
+            this.chkState.TabIndex = 31;
+            this.chkState.Text = "STATE";
+            this.chkState.UseVisualStyleBackColor = true;
             // 
-            // lblEmail
+            // chkPhone
             // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(301, 139);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(32, 13);
-            this.lblEmail.TabIndex = 15;
-            this.lblEmail.Text = "Email";
+            this.chkPhone.AutoSize = true;
+            this.chkPhone.Checked = true;
+            this.chkPhone.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkPhone.Location = new System.Drawing.Point(344, 54);
+            this.chkPhone.Name = "chkPhone";
+            this.chkPhone.Size = new System.Drawing.Size(67, 17);
+            this.chkPhone.TabIndex = 30;
+            this.chkPhone.Text = "Phone #";
+            this.chkPhone.UseVisualStyleBackColor = true;
+            // 
+            // chkEmail
+            // 
+            this.chkEmail.AutoSize = true;
+            this.chkEmail.Checked = true;
+            this.chkEmail.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkEmail.Location = new System.Drawing.Point(415, 54);
+            this.chkEmail.Name = "chkEmail";
+            this.chkEmail.Size = new System.Drawing.Size(58, 17);
+            this.chkEmail.TabIndex = 29;
+            this.chkEmail.Text = "EMAIL";
+            this.chkEmail.UseVisualStyleBackColor = true;
+            // 
+            // chkReferred
+            // 
+            this.chkReferred.AutoSize = true;
+            this.chkReferred.Checked = true;
+            this.chkReferred.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkReferred.Location = new System.Drawing.Point(479, 54);
+            this.chkReferred.Name = "chkReferred";
+            this.chkReferred.Size = new System.Drawing.Size(102, 17);
+            this.chkReferred.TabIndex = 28;
+            this.chkReferred.Text = "REFERRED BY";
+            this.chkReferred.UseVisualStyleBackColor = true;
+            // 
+            // chkCountryOfBirth
+            // 
+            this.chkCountryOfBirth.AutoSize = true;
+            this.chkCountryOfBirth.Checked = true;
+            this.chkCountryOfBirth.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkCountryOfBirth.Location = new System.Drawing.Point(117, 54);
+            this.chkCountryOfBirth.Name = "chkCountryOfBirth";
+            this.chkCountryOfBirth.Size = new System.Drawing.Size(98, 17);
+            this.chkCountryOfBirth.TabIndex = 27;
+            this.chkCountryOfBirth.Text = "Country of Birth";
+            this.chkCountryOfBirth.UseVisualStyleBackColor = true;
+            // 
+            // chkDob
+            // 
+            this.chkDob.AutoSize = true;
+            this.chkDob.Checked = true;
+            this.chkDob.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkDob.Location = new System.Drawing.Point(62, 54);
+            this.chkDob.Name = "chkDob";
+            this.chkDob.Size = new System.Drawing.Size(49, 17);
+            this.chkDob.TabIndex = 26;
+            this.chkDob.Text = "DOB";
+            this.chkDob.UseVisualStyleBackColor = true;
+            // 
+            // chkName
+            // 
+            this.chkName.AutoSize = true;
+            this.chkName.Checked = true;
+            this.chkName.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkName.Location = new System.Drawing.Point(6, 54);
+            this.chkName.Name = "chkName";
+            this.chkName.Size = new System.Drawing.Size(54, 17);
+            this.chkName.TabIndex = 25;
+            this.chkName.Text = "Name";
+            this.chkName.UseVisualStyleBackColor = true;
+            // 
+            // chkAll
+            // 
+            this.chkAll.AutoSize = true;
+            this.chkAll.Checked = true;
+            this.chkAll.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkAll.Location = new System.Drawing.Point(6, 31);
+            this.chkAll.Name = "chkAll";
+            this.chkAll.Size = new System.Drawing.Size(37, 17);
+            this.chkAll.TabIndex = 24;
+            this.chkAll.Text = "All";
+            this.chkAll.UseVisualStyleBackColor = true;
+            this.chkAll.CheckedChanged += new System.EventHandler(this.chkAll_CheckedChanged);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.endDateBox);
+            this.groupBox2.Controls.Add(this.lblToDate);
+            this.groupBox2.Controls.Add(this.startDateBox);
+            this.groupBox2.Controls.Add(this.lblFromDate);
+            this.groupBox2.Location = new System.Drawing.Point(12, 12);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(583, 62);
+            this.groupBox2.TabIndex = 25;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Select Date Range";
             // 
             // ExportForm
             // 
-            this.ClientSize = new System.Drawing.Size(606, 528);
-            this.Controls.Add(this.lblEmail);
-            this.Controls.Add(this.lblPhone);
-            this.Controls.Add(this.lblAddress);
-            this.Controls.Add(this.lblGender);
-            this.Controls.Add(this.lblToDate);
-            this.Controls.Add(this.lblFromDate);
-            this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.txtPhone);
-            this.Controls.Add(this.txtAddress);
-            this.Controls.Add(this.cmbGender);
-            this.Controls.Add(this.AllCheckBox);
-            this.Controls.Add(this.endDateBox);
-            this.Controls.Add(this.startDateBox);
+            this.ClientSize = new System.Drawing.Size(606, 223);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.ExportPatientData);
-            this.Controls.Add(this.ExportPrpExcel);
-            this.Controls.Add(this.ExportSCExcel);
             this.Name = "ExportForm";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button ExportSCExcel;
-        private System.Windows.Forms.Button ExportPrpExcel;
         private System.Windows.Forms.Button ExportPatientData;
         private System.Windows.Forms.DateTimePicker startDateBox;
         private System.Windows.Forms.DateTimePicker endDateBox;
-        private System.Windows.Forms.CheckBox AllCheckBox;
-        private System.Windows.Forms.ComboBox cmbGender;
-        private System.Windows.Forms.TextBox txtAddress;
-        private System.Windows.Forms.TextBox txtPhone;
-        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblFromDate;
         private System.Windows.Forms.Label lblToDate;
-        private System.Windows.Forms.Label lblGender;
-        private System.Windows.Forms.Label lblAddress;
-        private System.Windows.Forms.Label lblPhone;
-        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.CheckBox chkCity;
+        private System.Windows.Forms.CheckBox chkState;
+        private System.Windows.Forms.CheckBox chkPhone;
+        private System.Windows.Forms.CheckBox chkEmail;
+        private System.Windows.Forms.CheckBox chkReferred;
+        private System.Windows.Forms.CheckBox chkAll;
+        private System.Windows.Forms.CheckBox chkCountryOfBirth;
+        private System.Windows.Forms.CheckBox chkDob;
+        private System.Windows.Forms.CheckBox chkName;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }

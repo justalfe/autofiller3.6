@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AutoFiller_APP.exe" size="155136">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AutoFiller_APP.exe" size="164352">
       <assemblyIdentity name="AutoFiller_APP" version="4.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Xsr8BXU4RuDvvAEElnQEZ3i+mktTri8VM/EO+bVRBkk=</dsig:DigestValue>
+        <dsig:DigestValue>MjTT5JQZcQuNZxQlWiLv7LeecwTeyF2AHQdWRjjWD1E=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -254,13 +254,13 @@
       <dsig:DigestValue>PDi0iS901HwGSZGh93mham1NPQPtU/Tyi2i2sbJbQwU=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="DbManagment\DbConfig.json" size="352">
+  <file name="DbManagment\DbConfig.json" size="341">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>5TCRONtrYQ2y4sDGdfChGt755b5gU4xclexy/u8h6jQ=</dsig:DigestValue>
+      <dsig:DigestValue>1ZSKOTLKLwbKXPkJUNmhb02CtYKe3UmtguEbHXjeM7k=</dsig:DigestValue>
     </hash>
   </file>
   <file name="DbManagment\states.json" size="3749">

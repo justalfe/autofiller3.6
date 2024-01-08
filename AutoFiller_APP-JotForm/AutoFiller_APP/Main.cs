@@ -56,15 +56,9 @@ namespace AutoFiller_APP
         private void _refresh_Click(object sender, EventArgs e)
         {
             var filter_data = cmbFilter.Text;
+            var status = cmbSatus.Text;
 
-            if(filter_data == "Custom date range")
-            {
-                _forms = APIManager.GetForms(filter_data, dtFrom.Value.ToString("yyyy-MM-dd"), dtTo.Value.ToString("yyyy-MM-dd"));
-            }
-            else
-            {
-                _forms = APIManager.GetForms(filter_data);
-            }
+            _forms = APIManager.GetForms(filter_data, dtFrom.Value.ToString("yyyy-MM-dd"), dtTo.Value.ToString("yyyy-MM-dd"), txtLastname.Text, txtFirstName.Text, txtAlienNumber.Text, txtUSCISNumber.Text, txtPhone.Text, dtpBirth.Value.ToString("yyyy-MM-dd"), chkBirth.Checked, status);
 
             if (_forms.Count > 0)
             {
@@ -91,6 +85,7 @@ namespace AutoFiller_APP
             }
             _existingForms.Sort(_existingForms.Columns["Date"], ListSortDirection.Descending);
             _existingForms.Columns["Date"].HeaderCell.SortGlyphDirection = SortOrder.Descending;
+            lblFilterCnt.Text = "Total Result : " + _forms.Count;
         }
 
         private void _existingForms_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -238,6 +233,20 @@ namespace AutoFiller_APP
             }
             else
             {
+            }
+        }
+
+        private void btnFilterOption_Click(object sender, EventArgs e)
+        {
+            if(grbFilter.Visible)
+            {
+                grbFilter.Visible = false;
+                this.Width -= 240;
+            }
+            else
+            {
+                grbFilter.Visible = true;
+                this.Width += 240;
             }
         }
     }
